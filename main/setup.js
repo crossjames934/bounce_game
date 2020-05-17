@@ -7,7 +7,7 @@ function setup() {
       })
     );
   }
-  createCanvas(window.innerWidth, window.innerHeight);
+  createCanvas(window.innerWidth - 10, window.innerHeight - 10);
   colorMode(HSB);
   rectMode(CENTER);
   textAlign(CENTER);
