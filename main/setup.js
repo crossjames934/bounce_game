@@ -10,7 +10,8 @@ function setup() {
   createCanvas(window.innerWidth - 10, window.innerHeight - 10);
   colorMode(HSB);
   rectMode(CENTER);
-  strokeWeight(3);
+  //strokeWeight(3);
+  noStroke();
   textAlign(CENTER);
   engine = Engine.create();
   world = engine.world;

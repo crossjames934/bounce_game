@@ -8,5 +8,7 @@ function renderCurrentLevel() {
       return renderLevelTwo();
     case 3:
       return renderLevelThree();
+    case 4:
+      return renderLevelFour();
   }
 }

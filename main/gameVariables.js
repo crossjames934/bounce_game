@@ -10,6 +10,7 @@ const drawnShapes = [];
 const smoke = [];
 const goals = [];
 const blocks = [];
+const dangerZones = [];
 
 let plonks = [];
 

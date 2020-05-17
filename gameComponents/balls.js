@@ -58,4 +58,11 @@ Ball.prototype.show = function() {
             triggerFireworks(pos.x, pos.y, this.col);
         }
     }
+    for (let i = 0; i < dangerZones.length; i++) {
+        if (rectIntersect({x: pos.x, y: pos.y, w: this.r, h: this.r}, dangerZones[i]) && !this.logged) {
+            this.logged = true;
+            this.expended = true;
+            smoke.push(new Smoke(pos.x, pos.y, this.col));
+        }
+    }
 };

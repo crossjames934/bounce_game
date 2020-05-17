@@ -1,5 +1,5 @@
 function removeAllObjects(addSmoke = true) {
-  const gameObjects = [particles, drawnShapes, blocks, goals];
+  const gameObjects = [particles, drawnShapes, blocks, goals, dangerZones];
   for (let i = 0; i < gameObjects.length; i++) {
     for (let j = 0; j < gameObjects[i].length; j++) {
       if (i === 0 && addSmoke) {

@@ -15,6 +15,6 @@ function renderLevelThree() {
     newParticle(width * 0.8, 0, 8);
   }
   if (goals.length > 0 && goals[0].received.length > 0) {
-    setupLevelThree();
+    setupLevelFour();
   }
 }

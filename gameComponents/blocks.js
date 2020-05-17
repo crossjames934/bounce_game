@@ -1,9 +1,10 @@
-function Block(x, y, w, h, a = 0, isStatic = true, extraOptions, label = "block") {
+function Block(x, y, w, h, a = 0, extraOptions = {}) {
     let options = {
         friction: 0.3,
         restitution: 0.6,
-        isStatic: isStatic,
-        angle: a
+        angle: a,
+        isStatic: true,
+        ...extraOptions
     };
 
     this.body = Bodies.rectangle(x, y, w, h, options);

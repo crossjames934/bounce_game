@@ -1,5 +1,5 @@
 function renderGameObjects() {
-  const gameObjects = [particles, drawnShapes, blocks, smoke, goals];
+  const gameObjects = [particles, drawnShapes, blocks, smoke, dangerZones, goals];
   for (let i = 0; i < gameObjects.length; i++) {
     for (let j = 0; j < gameObjects[i].length; j++) {
       gameObjects[i][j].show();
