@@ -39,9 +39,11 @@ Ball.prototype.show = function() {
     ellipse(-eyeDistFromCenter, 0, pupilDiameter);
     ellipse(eyeDistFromCenter, 0, pupilDiameter);
     // Mouth
-    const mouthDiameter = this.r * 0.8;
-    const mouthYDist = this.r * 0.4;
-    arc(0, mouthYDist, mouthDiameter, mouthDiameter, 0, PI);
+    if (this.body.angularSpeed < 0.5 ) {
+        const mouthDiameter = this.r * 0.8;
+        const mouthYDist = this.r * 0.4;
+        arc(0, mouthYDist, mouthDiameter, mouthDiameter, 0, PI);
+    }
     pop();
     this.age++;
     if (isOffScreen(this) || this.age > this.lifeSpan) {

@@ -10,6 +10,7 @@ function setup() {
   createCanvas(window.innerWidth - 10, window.innerHeight - 10);
   colorMode(HSB);
   rectMode(CENTER);
+  strokeWeight(3);
   textAlign(CENTER);
   engine = Engine.create();
   world = engine.world;
@@ -30,14 +31,7 @@ function setup() {
   }
 
   document.getElementById('resetBtn').addEventListener('click', resetDrawnShapes);
+  document.getElementById('startBtn').addEventListener('click', setUpLevelOne);
 
   Events.on(engine, 'collisionStart', collision);
-
-  // level = new Level("level1", 0, false, false, {
-  //
-  // }, function() {
-  //   if (frameCount % 100 === 0) {
-  //     newParticle(width * 0.2, 0, 8);
-  //   }
-  // }, function() { console.log("Hooray")}, false);
 }

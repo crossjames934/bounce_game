@@ -11,6 +11,6 @@ function renderGameObjects() {
       }
     }
   }
-  menu();
+  //menu();
   Engine.update(engine, 1000 / 30);
 }

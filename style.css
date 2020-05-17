@@ -22,6 +22,18 @@ body {
     cursor: pointer;
 }
 
+#startBtn {
+    padding: 10px;
+    border-radius: 10px;
+    background: chartreuse;
+    color: black;
+    font-size: 48px;
+    position: fixed;
+    cursor: pointer;
+    top: calc(50vh - 50px);
+    left: calc(50vw - 80px);
+}
+
 .myButton {
     -moz-box-shadow:inset 0px 1px 0px 0px #276873;
     -webkit-box-shadow:inset 0px 1px 0px 0px #276873;
