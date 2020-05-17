@@ -15,7 +15,7 @@ function Block(x, y, w, h, a = 0, isStatic = true, extraOptions, label = "block"
 }
 
 Block.prototype.show = function() {
-    fill(255);
+    fill(180, 180, 255);
     stroke(255);
     let pos = this.body.position;
     push();

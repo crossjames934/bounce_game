@@ -26,7 +26,22 @@ Ball.prototype.show = function() {
     let pos = this.body.position;
     push();
     translate(pos.x, pos.y);
+    rotate(this.body.angle);
     ellipse(0, 0, this.r * 2);
+    const eyeDistFromCenter = this.r * 0.4;
+    const irisDiameter = this.r * 0.8;
+    const pupilDiameter = irisDiameter / 2;
+    // Eyes
+    fill(255);
+    ellipse(-eyeDistFromCenter, 0, irisDiameter);
+    ellipse(eyeDistFromCenter, 0, irisDiameter);
+    fill(0);
+    ellipse(-eyeDistFromCenter, 0, pupilDiameter);
+    ellipse(eyeDistFromCenter, 0, pupilDiameter);
+    // Mouth
+    const mouthDiameter = this.r * 0.8;
+    const mouthYDist = this.r * 0.4;
+    arc(0, mouthYDist, mouthDiameter, mouthDiameter, 0, PI);
     pop();
     this.age++;
     if (isOffScreen(this) || this.age > this.lifeSpan) {
