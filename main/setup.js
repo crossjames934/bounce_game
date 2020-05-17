@@ -1,7 +1,4 @@
 function setup() {
-  // for (let i = 0; i < GAMEOBJECTS.length; i++) {
-  //   G[GAMEOBJECTS[i]] = [];
-  // }
   for (let i = 0; i < 16; i++) {
     plonks.push(
       new Howl({
@@ -32,13 +29,15 @@ function setup() {
     }
   }
 
+  document.getElementById('resetBtn').addEventListener('click', resetDrawnShapes);
+
   Events.on(engine, 'collisionStart', collision);
 
-  level = new Level("level1", 0, false, false, {
-
-  }, function() {
-    if (frameCount % 100 === 0) {
-      newParticle(width * 0.2, 0, 8);
-    }
-  }, function() { console.log("Hooray")}, false);
+  // level = new Level("level1", 0, false, false, {
+  //
+  // }, function() {
+  //   if (frameCount % 100 === 0) {
+  //     newParticle(width * 0.2, 0, 8);
+  //   }
+  // }, function() { console.log("Hooray")}, false);
 }

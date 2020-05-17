@@ -20,4 +20,4 @@ let canDraw = true;
 let drawStatic = true;
 let startedDrawing = false;
 let stage = 0;
-let level;
+let level = 0;
