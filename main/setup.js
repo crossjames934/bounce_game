@@ -33,6 +33,7 @@ function setup() {
 
   document.getElementById('resetBtn').addEventListener('click', resetDrawnShapes);
   document.getElementById('startBtn').addEventListener('click', setUpLevelOne);
+  document.getElementById('levelDesignBtn').addEventListener('click', triggerLevelDesignMode);
 
   Events.on(engine, 'collisionStart', collision);
 }

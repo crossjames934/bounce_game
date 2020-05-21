@@ -17,7 +17,6 @@ function Block(x, y, w, h, a = 0, extraOptions = {}) {
 
 Block.prototype.show = function() {
     fill(180, 180, 255);
-    stroke(255);
     let pos = this.body.position;
     push();
     translate(pos.x, pos.y);

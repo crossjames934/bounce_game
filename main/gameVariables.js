@@ -22,3 +22,9 @@ let drawStatic = true;
 let startedDrawing = false;
 let stage = 0;
 let level = 0;
+
+let levelDesignMode = false;
+let chosenBodyType = null;
+let chosenBodyAngle = 0;
+let chosenBodyWidth = 0.1;
+let chosenBodyHeight = 0.1;

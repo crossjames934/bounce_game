@@ -3,6 +3,7 @@ function draw() {
   cursor(ARROW);
   mouseObj.x = mouseX;
   mouseObj.y = mouseY;
+  if (levelDesignMode) return renderLevelDesignMode();
   renderCurrentLevel();
   handleUserInput();
   renderGameObjects();

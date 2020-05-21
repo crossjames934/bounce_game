@@ -23,6 +23,7 @@ function CustomShape(vertices) {
 }
 
 CustomShape.prototype.show = function() {
+    push();
     fill(200);
     stroke(255);
     beginShape();
@@ -30,4 +31,5 @@ CustomShape.prototype.show = function() {
         vertex(this.body.vertices[i].x, this.body.vertices[i].y)
     }
     endShape(CLOSE);
+    pop();
 };

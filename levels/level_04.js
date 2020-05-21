@@ -2,7 +2,7 @@ function setupLevelFour() {
   removeAllObjects();
   level = 4;
   const higherBlock = new Block(width * 0.2, height * 0.4, width * 0.2, height * 0.1, 60);
-  const lowerBlock = new Block(width * 0.7, height * 0.8, width * 0.2, height * 0.1, 0, {label: "red"});
+  const lowerBlock = new Block(width * 0.7, height * 0.8, width * 0.2, height * 0.1);
   blocks.push(higherBlock, lowerBlock);
   const dangerZone = new DangerZone(width * 0.5, height * 0.7, width * 0.2, height * 0.1);
   dangerZones.push(dangerZone);

@@ -8,6 +8,6 @@ function Goal(x, y, w, h) {
 
 Goal.prototype.show = function() {
     noStroke();
-    fill(80, 100, 100, 50);
+    fill(80, 100, 100);
     rect(this.x, this.y, this.w, this.h);
 };

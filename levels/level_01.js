@@ -2,6 +2,7 @@ function setUpLevelOne() {
   level = 1;
   removeAllObjects();
   document.getElementById('startBtn').style.display = "none";
+  document.getElementById('levelDesignBtn').style.display = "none";
   const goalCoords = [width * 0.6, height * 0.7, width * 0.1, height * 0.1];
   goals.push(new Goal(...goalCoords));
   blocks.push(new Block(goalCoords[0], goalCoords[1] + goalCoords[3], goalCoords[2], goalCoords[3]));
