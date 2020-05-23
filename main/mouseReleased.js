@@ -1,0 +1,3 @@
+function mouseReleased() {
+  mouseHasBeenReleased = true;
+}

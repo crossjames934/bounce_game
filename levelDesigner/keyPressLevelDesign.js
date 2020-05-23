@@ -19,7 +19,7 @@ function keyPressLevelDesign() {
     chosenBodyWidth += 0.01;
   }
 
-  if (keyIsDown(40 && chosenBodyHeight > 0.015)) {
+  if (keyIsDown(40) && chosenBodyHeight > 0) {
     chosenBodyHeight -= 0.01;
   }
 
