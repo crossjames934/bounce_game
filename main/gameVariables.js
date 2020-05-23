@@ -30,4 +30,5 @@ let chosenBodyType = null;
 let chosenBodyAngle = 0;
 let chosenBodyWidth = 0.1;
 let chosenBodyHeight = 0.1;
+let chosenStartingX = 0.5;
 const levelDesignElements = [];

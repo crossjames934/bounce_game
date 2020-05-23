@@ -27,4 +27,11 @@ function keyPressLevelDesign() {
     chosenBodyHeight += 0.01;
   }
 
+  if (keyIsDown(88) && chosenStartingX < width) {
+    chosenStartingX += 0.01;
+  }
+
+  if (keyIsDown(90) && chosenStartingX > 0) {
+    chosenStartingX -= 0.01;
+  }
 }

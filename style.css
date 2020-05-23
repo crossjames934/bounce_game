@@ -46,6 +46,13 @@ body {
     left: calc(50vw - 160px);
 }
 
+#saveLevelBtn {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+}
+
 .designerBtn {
     padding: 10px;
     font-size: 20px;

@@ -14,10 +14,6 @@
     <script src="gameComponents/drawnShapes.js"></script>
     <script src="gameComponents/goal.js"></script>
     <script src="gameComponents/smoke.js"></script>
-    <script src="levels/level_01.js"></script>
-    <script src="levels/level_02.js"></script>
-    <script src="levels/level_03.js"></script>
-    <script src="levels/level_04.js"></script>
     <script src="levelDesigner/renderLevelDesignMode.js"></script>
     <script src="levelDesigner/triggerLevelDesignMode.js"></script>
     <script src="levelDesigner/showSelectionUnderCursor.js"></script>
@@ -25,6 +21,8 @@
     <script src="levelDesigner/handleClickOnShape.js"></script>
     <script src="levelDesigner/renderChosenShapes.js"></script>
     <script src="levelDesigner/fillColorFromBodyType.js"></script>
+    <script src="levelDesigner/saveLevel.js"></script>
+    <script src="levelDesigner/renderStartingX.js"></script>
     <script src="main/gameVariables.js"></script>
     <script src="main/handleUserInput.js"></script>
     <script src="main/renderGameObjects.js"></script>
@@ -39,6 +37,8 @@
     <script src="utilityFunctions/removeAllObjects.js"></script>
     <script src="utilityFunctions/resetDrawnShapes.js"></script>
     <script src="utilityFunctions/triggerFireworks.js"></script>
+    <script src="utilityFunctions/roundToThreeDecimalPlaces.js"></script>
+    <script src="utilityFunctions/download.js"></script>
 </head>
 <body>
     <button id="resetBtn">RESET</button>
@@ -47,5 +47,6 @@
     <button id="placeBlockBtn" class="designerBtn">BLOCK</button>
     <button id="placeGoalBtn" class="designerBtn">GOAL</button>
     <button id="placeDangerBtn" class="designerBtn">DANGER</button>
+    <button id="saveLevelBtn" class="designerBtn">SAVE LEVEL</button>
 </body>
 </html>
