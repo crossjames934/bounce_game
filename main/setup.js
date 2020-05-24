@@ -40,6 +40,13 @@ function setup() {
         particles.splice(indexInArray, 1);
         World.remove(world, ball);
       }
+      if (collides('particle', 'bouncy')) {
+        let ball = labelA === 'particle' ? pairs[i].bodyA : pairs[i].bodyB;
+        console.log(ball);
+        setTimeout(() => {
+          Matter.Body.applyForce(ball, {x: ball.position.x, y: ball.position.y}, {x: 0, y: -1});
+        }, 10);
+      }
     }
   }
 
