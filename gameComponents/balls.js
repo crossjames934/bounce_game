@@ -14,7 +14,6 @@ function Ball(x, y, r, options = {}, label) {
     this.body.pitch = floor(random(plonks.length));
     this.r = r;
     this.expended = false; // to be deleted
-    this.logged = false; // has been logged by a goal as received
     this.age = 0;
     this.lifeSpan = 600;
     World.add(world, this.body);
@@ -50,19 +49,21 @@ Ball.prototype.show = function() {
         this.expended = true;
         if (this.age > this.lifeSpan) smoke.push(new Smoke(pos.x, pos.y, this.col));
     }
-    for (let i = 0; i < goals.length; i++) {
-        if (rectIntersect({x: pos.x, y: pos.y, w: this.r, h: this.r}, goals[i]) && !this.logged) {
-            goals[i].received.push(`${this.body.label} -- Color: ${this.col}`);
-            this.logged = true;
-            smoke.push(new Smoke(pos.x, pos.y, this.col));
-            triggerFireworks(pos.x, pos.y, this.col);
-        }
-    }
-    for (let i = 0; i < dangerZones.length; i++) {
-        if (rectIntersect({x: pos.x, y: pos.y, w: this.r, h: this.r}, dangerZones[i]) && !this.logged) {
-            this.logged = true;
-            this.expended = true;
-            smoke.push(new Smoke(pos.x, pos.y, this.col));
-        }
-    }
 };
+
+
+// for (let i = 0; i < goals.length; i++) {
+//     if (rectIntersect({x: pos.x, y: pos.y, w: this.r, h: this.r}, goals[i]) && !this.logged) {
+//         goals[i].received.push(`${this.body.label} -- Color: ${this.col}`);
+//         this.logged = true;
+//         smoke.push(new Smoke(pos.x, pos.y, this.col));
+//         triggerFireworks(pos.x, pos.y, this.col);
+//     }
+// }
+// for (let i = 0; i < dangerZones.length; i++) {
+//     if (rectIntersect({x: pos.x, y: pos.y, w: this.r, h: this.r}, dangerZones[i]) && !this.logged) {
+//         this.logged = true;
+//         this.expended = true;
+//         smoke.push(new Smoke(pos.x, pos.y, this.col));
+//     }
+// }

@@ -3,8 +3,9 @@ function draw() {
   cursor(ARROW);
   mouseObj.x = mouseX;
   mouseObj.y = mouseY;
-  if (levelDesignMode) return renderLevelDesignMode();
-  renderCurrentLevel();
-  handleUserInput();
   renderGameObjects();
+  handleUserInput();
+  if (levelDesignMode) return renderLevelDesignMode();
+  if (level === -1) return rainBallsForMenu();
+  renderCurrentLevel();
 }

@@ -13,7 +13,7 @@ function saveLevel() {
     }
   });
   const level = {
-    startingX: chosenStartingX,
+    startingX: roundToThreeDecimalPlaces(chosenStartingX),
     shapes: shapesForSave,
   }
   download('customLevel.js', `const level = ${JSON.stringify(level)};`);

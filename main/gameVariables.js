@@ -20,12 +20,13 @@ let touchedVertices = [];
 let canDraw = true;
 let drawStatic = true;
 let startedDrawing = false;
-let stage = 0;
-let level = 0;
+//let stage = 0;
+let level = -1;
 
 let mouseHasBeenReleased = true;
 
 let levelDesignMode = false;
+
 let chosenBodyType = null;
 let chosenBodyAngle = 0;
 let chosenBodyWidth = 0.1;

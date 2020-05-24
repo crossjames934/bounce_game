@@ -27,11 +27,23 @@ function setup() {
         plonks[ball.pitch].stereo(stereoPosition);
         plonks[ball.pitch].play();
       }
+      if (collides('particle', 'goal')) {
+        const {x, y} = goals[0].body.position;
+        triggerFireworks(x, y);
+        generateNextLevel();
+      }
+      if (collides('particle', 'danger')) {
+        let ball = labelA === 'particle' ? pairs[i].bodyA : pairs[i].bodyB;
+        const indexInArray = particles.findIndex(particle => particle.body.id === ball.id);
+        smoke.push(new Smoke(ball.position.x, ball.position.y, '#ff0000'));
+        particles.splice(indexInArray, 1);
+        World.remove(world, ball);
+      }
     }
   }
 
   document.getElementById('resetBtn').addEventListener('click', resetDrawnShapes);
-  document.getElementById('startBtn').addEventListener('click', setUpLevelOne);
+  document.getElementById('startBtn').addEventListener('click', startGame);
   document.getElementById('levelDesignBtn').addEventListener('click', triggerLevelDesignMode);
 
   Events.on(engine, 'collisionStart', collision);

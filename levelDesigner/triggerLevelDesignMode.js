@@ -1,6 +1,5 @@
 function triggerLevelDesignMode() {
   levelDesignMode = true;
-  stage = 1;
   level = -1;
   document.getElementById('levelDesignBtn').style.display = "none";
   document.getElementById('startBtn').style.display = "none";
