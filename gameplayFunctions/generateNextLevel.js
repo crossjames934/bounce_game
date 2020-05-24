@@ -1,6 +1,7 @@
 function generateNextLevel() {
-  removeAllObjects();
   level++;
+  temporarilyPreventDrawing();
+  removeAllObjects();
   const currentLevel = allLevels[level];
   const {shapes} = currentLevel;
   for (let i = 0; i < shapes.length; i++) {

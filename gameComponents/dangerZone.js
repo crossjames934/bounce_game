@@ -27,13 +27,4 @@ DangerZone.prototype.show = function() {
   rotate(this.angle);
   rect(0, 0, this.w, this.h);
   pop();
-  push();
-  stroke("#00ff00");
-  noFill();
-  beginShape();
-  for (let i = 0; i < this.body.vertices.length; i++) {
-    vertex(this.body.vertices[i].x, this.body.vertices[i].y);
-  }
-  endShape();
-  pop();
 };

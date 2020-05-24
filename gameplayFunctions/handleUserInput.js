@@ -8,7 +8,7 @@ function handleUserInput() {
     startedDrawing = true;
   } else {
     if (touchedVertices.length > 0) {
-      drawnShapes.push(new CustomShape([touchedVertices[0], [mouseX, mouseY]]));
+      if (canDraw) drawnShapes.push(new CustomShape([touchedVertices[0], [mouseX, mouseY]]));
       touchedVertices = [];
     }
     startedDrawing = false;

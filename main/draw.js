@@ -1,11 +1,14 @@
 function draw() {
   background(0, 0, 0);
-  cursor(ARROW);
+  if (canDraw) {
+    fill(100, 100, 100);
+    ellipse(100, 100, 100);
+  }
   mouseObj.x = mouseX;
   mouseObj.y = mouseY;
   renderGameObjects();
-  handleUserInput();
   if (levelDesignMode) return renderLevelDesignMode();
+  handleUserInput();
   if (level === -1) return rainBallsForMenu();
   renderCurrentLevel();
 }

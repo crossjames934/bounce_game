@@ -20,6 +20,7 @@ let touchedVertices = [];
 let canDraw = true;
 let drawStatic = true;
 let startedDrawing = false;
+let preventDrawing = false;
 //let stage = 0;
 let level = -1;
 
