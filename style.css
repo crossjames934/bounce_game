@@ -3,6 +3,7 @@ body {
     background: #222;
     color: white;
     margin: 0;
+    overflow: hidden;
 }
 
 .center {

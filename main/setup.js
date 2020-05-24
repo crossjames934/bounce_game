@@ -7,7 +7,8 @@ function setup() {
       })
     );
   }
-  createCanvas(window.innerWidth - 10, window.innerHeight - 10);
+  const proportionateCanvas = determineAspectRatio();
+  createCanvas(proportionateCanvas.w, proportionateCanvas.h);
   colorMode(HSB);
   rectMode(CENTER);
   noStroke();
