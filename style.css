@@ -68,12 +68,16 @@ body {
     left: 20px;
 }
 
+#placeBouncyBtn {
+    left: 120px;
+}
+
 #placeGoalBtn {
-    left: 160px;
+    left: 240px;
 }
 
 #placeDangerBtn {
-    left: 300px;
+    left: 340px;
 }
 
 /*.myButton {*/

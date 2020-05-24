@@ -16,7 +16,8 @@ function Block(x, y, w, h, a = 0, extraOptions = {}) {
 }
 
 Block.prototype.show = function() {
-    fill(180, 180, 255);
+    const colorHex = this.body.label === "bouncy" ? "#747fe5" : "#74e5c5";
+    fill(colorHex);
     let pos = this.body.position;
     push();
     translate(pos.x, pos.y);
