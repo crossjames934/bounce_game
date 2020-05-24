@@ -1,6 +1,7 @@
 const allLevels = [
-  bouncyBlockTest,
   simpleLevel,
+  bouncyBlockTest,
+  wonkyT,
   angryFace,
   sloppySandwich,
   deadlyFunnel,
